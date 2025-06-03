@@ -1,99 +1,100 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game designer portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Anna Pennie | Game Designer & Developer</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
-    <div class="stars-bg">
-        <div class="stars"></div>
-    </div>
-    <div class="glitch-overlay"></div>
-
     <header class="hero">
         <div class="container">
-            <h1 class="glitch" data-text="Anna Pennie">Anna Pennie</h1>
-            <h2 class="subtitle">Game designer & Developer</h2>
-            <p class="hero-description">I build worlds, craft experiences, and bring ideas to life.</p>
+            <h1>Anna Pennie</h1>
+            <p class="subtitle">Game Designer & Developer</p>
+            <p class="hero-description">
+                I design systems, build prototypes, and turn creative visions into interactive experiences.
+            </p>
             <div class="social-links">
                 <a href="#contact" class="cta-button">Contact</a>
-                <a href="#" class="social-icon"><i class="fab fa-artstation"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon" title="ArtStation"><i class="fab fa-artstation"></i></a>
+                <a href="#" class="social-icon" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-icon" title="GitHub"><i class="fab fa-github"></i></a>
             </div>
         </div>
     </header>
 
-    <section class="portfolio-section">
-        <div class="container">
-            <h2 class="section-title"><span>My projects</span></h2>
-            <div class="portfolio-grid">
-                <!-- Project 1 -->
-                <a href="projects/project1.html" class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/project1-thumb.jpg" alt="Project 1">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Top-Down Third-Person Shooter Level Prototype</h3>
-                                <p>Game Design & Programming | Taitaja 2025 Competition</p>
-                                <span class="view-more">More →</span>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+    <main>
+        <section class="portfolio-section">
+            <div class="container">
+                <h2 class="section-title">My Projects</h2>
+                <div class="portfolio-grid">
 
-                <!-- Project 2 -->
-                <a href="projects/project2.html" class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/project2-thumb.jpg" alt="Project 2">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Name</h3>
-                                <p>Text</p>
-                                <span class="view-more">More →</span>
+                    <!-- Project 1 -->
+                    <a href="projects/project1.html" class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/project1-thumb.jpg" alt="Top-Down Shooter Prototype" />
+                            <div class="overlay">
+                                <div>
+                                    <h3>Top-Down Shooter Prototype</h3>
+                                    <p>Game Design & Programming · Taitaja 2025</p>
+                                    <span class="view-more">View project →</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
 
-                <!-- Project 3 -->
-                <a href="projects/project3.html" class="portfolio-item">
-                    <div class="portfolio-image">
-                        <img src="assets/images/project3-thumb.jpg" alt="Project 3">
-                        <div class="overlay">
-                            <div class="overlay-content">
-                                <h3>Name</h3>
-                                <p>text</p>
-                                <span class="view-more">More →</span>
+                    <!-- Project 2 -->
+                    <a href="projects/project2.html" class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/project2-thumb.jpg" alt="Project 2" />
+                            <div class="overlay">
+                                <div>
+                                    <h3>Project Title</h3>
+                                    <p>Short project description</p>
+                                    <span class="view-more">View project →</span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
+
+                    <!-- Project 3 -->
+                    <a href="projects/project3.html" class="portfolio-item">
+                        <div class="portfolio-image">
+                            <img src="assets/images/project3-thumb.jpg" alt="Project 3" />
+                            <div class="overlay">
+                                <div>
+                                    <h3>Project Title</h3>
+                                    <p>Short project description</p>
+                                    <span class="view-more">View project →</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title"><span>Contact me</span></h2>
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" required placeholder="Name">
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" required placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" rows="5" required placeholder="Message"></textarea>
-                </div>
-                <button type="submit" class="cta-button">Send message</button>
-            </form>
-        </div>
-    </section>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2 class="section-title">Contact Me</h2>
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required placeholder="Your Name" />
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required placeholder="Your Email" />
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="5" required placeholder="Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="cta-button">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="site-footer">
         <div class="container">
