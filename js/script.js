@@ -1,4 +1,40 @@
-document.addEventListener('DOMContentLoaded', function() {
+function createStars() {
+    const starsContainer = document.querySelector('.stars');
+    if (!starsContainer) return;
+
+
+    const starCount = 200;
+
+    for (let i = 0; i < starCount; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+
+       
+        const size = Math.random() * 2 + 0.5;
+        const posX = Math.random() * 100;
+        const posY = Math.random() * 100;
+        const opacity = Math.random() * 0.7 + 0.1;
+        const duration = Math.random() * 50 + 50;
+        const delay = Math.random() * 10;
+
+        star.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            background: white;
+            border-radius: 50%;
+            left: ${posX}%;
+            top: ${posY}%;
+            opacity: ${opacity};
+            animation: twinkle ${duration}s linear ${delay}s infinite;
+            box-shadow: 0 0 ${size * 2}px ${size}px rgba(255,255,255,0.2);
+        `;
+
+        starsContainer.appendChild(star);
+    }
+}
+document.addEventListener('DOMContentLoaded', function () {
+    createStars();
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
