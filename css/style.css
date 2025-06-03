@@ -1,4 +1,12 @@
-/* Base reset */
+/* Global Styles */
+:root {
+    --black: #0A0A0A;
+    --dark-green: #1E3A3A;
+    --accent-green: #2D5F5D;
+    --light-gray: #CCCCCC;
+    --white: #FFFFFF;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,220 +14,141 @@
 }
 
 body {
-    font-family: 'Rajdhani', sans-serif;
-    background-color: #0b0f10;
-    color: #e0f0e9;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    font-size: 1rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
 }
 
 a {
-    color: inherit;
     text-decoration: none;
-    transition: color 0.2s ease;
+    color: inherit;
 }
 
-img {
-    max-width: 100%;
-    display: block;
-    border-radius: 12px;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-}
-
-/* Typography */
-h1, h2, h3, h4 {
-    font-weight: 700;
-}
-
-h1 {
-    font-size: 3rem;
-    color: #00ff99;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
-
-.section-title {
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #1fe2a3;
-}
-
-/* Hero */
+/* Hero Section */
 .hero {
-    padding: 6rem 2rem 4rem;
-    text-align: center;
-}
-
-    .hero h1 {
-        margin-bottom: 1rem;
-    }
-
-    .hero .subtitle {
-        font-size: 1.25rem;
-        color: #77ffe0;
-    }
-
-.hero-description {
-    max-width: 600px;
-    margin: 1.5rem auto;
-    font-size: 1.1rem;
-    color: #b5cfc6;
-}
-
-.social-links {
-    margin-top: 2rem;
+    height: 100vh;
     display: flex;
     justify-content: center;
-    gap: 1rem;
-}
-
-.social-icon {
-    font-size: 1.5rem;
-    color: #1fe2a3;
-}
-
-.cta-button {
-    display: inline-block;
-    background-color: #1fe2a3;
-    color: #0b0f10;
-    padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-
-    .cta-button:hover {
-        background-color: #00ff99;
-    }
-
-/* Portfolio */
-.portfolio-section {
-    padding: 4rem 2rem;
-}
-
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.portfolio-item {
-    background-color: #121a1c;
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-    .portfolio-item:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 24px rgba(0, 255, 153, 0.2);
-    }
-
-.portfolio-image {
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.7)), url('../images/bg-pattern.png') no-repeat center;
+    background-size: cover;
     position: relative;
 }
 
-    .portfolio-image img {
-        width: 100%;
-        display: block;
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.slogan {
+    color: var(--accent-green);
+    font-size: 1.8rem;
+    margin: 10px 0;
+    font-weight: 600;
+}
+
+.subtitle {
+    color: var(--light-gray);
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    margin-top: 30px;
+}
+
+    .social-icons a {
+        color: var(--white);
+        font-size: 2rem;
+        margin: 0 15px;
+        transition: color 0.3s, text-shadow 0.3s;
     }
 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
-    color: #fff;
-    padding: 1rem;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
+        .social-icons a:hover {
+            color: var(--accent-green);
+            text-shadow: 0 0 10px var(--accent-green);
+        }
 
-.portfolio-item:hover .overlay {
-    opacity: 1;
-}
-
-.overlay h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-}
-
-.overlay p {
-    font-size: 0.9rem;
-    color: #a0cfc2;
-}
-
-.view-more {
-    margin-top: 0.5rem;
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #1fe2a3;
-}
-
-/* Contact */
-.contact-section {
-    background: #101b1d;
-    padding: 4rem 2rem;
-}
-
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
-    max-width: 600px;
+/* Projects Section */
+.projects-section {
+    padding: 80px 20px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: none;
-    border-radius: 8px;
-    background-color: #1a2b2f;
-    color: #e0f0e9;
-    font-size: 1rem;
-}
-
-    .form-group input:focus,
-    .form-group textarea:focus {
-        outline: 2px solid #1fe2a3;
+    .projects-section h2 {
+        font-size: 3rem;
+        margin-bottom: 50px;
+        text-align: center;
+        color: var(--accent-green);
     }
 
-.contact-form button {
-    align-self: flex-start;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--dark-green);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 250px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(45, 95, 93, 0.3);
+    }
+
+.project-content {
+    padding: 25px;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+    z-index: 1;
+}
+
+.project-card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    color: var(--light-gray);
 }
 
 /* Footer */
-.site-footer {
-    padding: 2rem;
+footer {
     text-align: center;
-    background: #0b0f10;
-    color: #667c77;
-    font-size: 0.9rem;
-}
-
-.footer-links a {
-    margin: 0 0.75rem;
-    color: #1fe2a3;
+    padding: 30px;
+    background-color: var(--dark-green);
+    color: var(--light-gray);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
     .hero h1 {
-        font-size: 2.2rem;
+        font-size: 3.5rem;
     }
 
-    .portfolio-grid {
+    .projects-grid {
         grid-template-columns: 1fr;
     }
 }
