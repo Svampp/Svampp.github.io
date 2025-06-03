@@ -7,64 +7,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
-    <style>
-        .project-header {
-            background: linear-gradient(rgba(10, 10, 10, 0.8), rgba(10, 10, 10, 0.8)), url('../images/project1-bg.jpg') no-repeat center;
-            background-size: cover;
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-            .project-header h1 {
-                font-size: 3.5rem;
-                margin-bottom: 15px;
-            }
-
-            .project-header .tags {
-                color: var(--accent-green);
-                font-size: 1.2rem;
-            }
-
-        .project-content {
-            max-width: 900px;
-            margin: 50px auto;
-            padding: 0 20px;
-        }
-
-            .project-content h2 {
-                color: var(--accent-green);
-                margin: 40px 0 20px;
-                font-size: 2rem;
-            }
-
-            .project-content p {
-                margin-bottom: 20px;
-            }
-
-        .media-container {
-            margin: 40px 0;
-        }
-
-            .media-container img {
-                max-width: 100%;
-                border-radius: 5px;
-                box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-            }
-
-        .back-button {
-            display: inline-block;
-            margin: 30px 0;
-            padding: 10px 20px;
-            background-color: var(--dark-green);
-            color: white;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-            .back-button:hover {
-                background-color: var(--accent-green);
-            }
-    </style>
 </head>
 <body>
     <header class="project-header">
@@ -84,11 +26,6 @@
             <li>At least two types of traps</li>
             <li>A functional third-person shooter mechanic from a top-down perspective</li>
         </ul>
-
-        <div class="media-container">
-            <!-- Placeholder for image/video -->
-            <img src="../images/schematic_map.png" alt="Schematic Map">
-        </div>
 
         <h2>My Role</h2>
         <p>As the game designer, I was in charge of:</p>
@@ -114,11 +51,6 @@
             <li>Enemies: 4x Type I enemies + 1x Type II enemy (150 HP, 20 damage per hit), spawns after defeating all Type I enemies</li>
         </ul>
 
-        <div class="media-container">
-            <!-- Placeholder for image/video -->
-            <img src="../images/project1-2.jpg" alt="Level Layout">
-        </div>
-
         <h2>Design Highlights</h2>
         <ul>
             <li>Emphasis on player positioning and movement to avoid environmental hazards</li>
@@ -126,11 +58,41 @@
             <li>The second room introduces layered combat and reactive enemy spawning, enhancing pacing and surprise</li>
         </ul>
 
-        <p>This project demonstrates my ability to think and work under time pressure, quickly develop functional level design, and translate ideas into a playable experience. It also highlights my combined skills in both game design and technical implementation.</p>
+        <div class="project-conclusion">
+            This project demonstrates my ability to think and work under time pressure, quickly develop functional level design, and translate ideas into a playable experience. It also highlights my combined skills in both game design and technical implementation.
+        </div>
+
+        <!-- Gallery Section -->
+        <h2>Project Gallery</h2>
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="../images/schematic_map.png" alt="Schematic Map">
+                <div class="caption">Schematic Map</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/project1-2.jpg" alt="Enemy Placement">
+                <div class="caption">Enemy Placement Diagram</div>
+            </div>
+
+            <div class="gallery-item">
+                <video controls>
+                    <source src="../videos/project1-gameplay.mp4" type="video/mp4">
+                </video>
+                <div class="caption">Gameplay Video</div>
+            </div>
+
+            <div class="gallery-item">
+                <img src="../images/project1-3.jpg" alt="Trap Mechanism">
+                <div class="caption">Saw Blade Trap Mechanism</div>
+            </div>
+        </div>
     </div>
 
     <footer>
         <p>&copy; 2025 Anna Pennie. All rights reserved.</p>
     </footer>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
