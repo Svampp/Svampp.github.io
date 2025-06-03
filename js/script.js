@@ -57,6 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
     if (heroSection) {
         createParticles(heroSection);
     }
+
+    const projectTitles = document.querySelectorAll('.project-title');
+    projectTitles.forEach(title => {
+        randomGlitch(title);
+    });
 });
 
 function createParticles(container) {
@@ -87,4 +92,17 @@ function createParticles(container) {
         
         container.appendChild(particle);
     }
+}
+
+function randomGlitch(element) {
+    if (!element) return;
+
+    setInterval(() => {
+        const duration = Math.random() * 0.5 + 0.2;
+        element.style.animation = `glitch-skew ${duration}s linear`;
+
+        setTimeout(() => {
+            element.style.animation = '';
+        }, duration * 1000);
+    }, 5000);
 }
